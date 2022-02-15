@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <title>Fault Report</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../css/fault-report-user.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+
+
+<body style="background-color: #202A2A;">
+
+    <div class="container">
+
+        <!--div class="panel-group" id="accordion"-->
+
+        <div class="panel panel-default">
+
+            <div class="panel-heading">
+
+                <h4 class="panel-title">
+
+                     <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNi">Hostel Complaint</a>
+
+                </h4>
+
+            </div>
+
+            <div id="collapseNi" class="panel-collapse collapse">
+
+                <div class="panel-body">
+
+                    <!--                    Enter code here -->
+
+                    <form>
+
+                        Village:
+
+                        <br>
+
+                        <select class="form-control" id="villageDropdown">
+
+                            <optgroup label="Village 1">
+
+                                <option value="V1A">V1A - Male</option>
+
+                                <option value="V1B">V1B - Male</option>
+
+                                <option value="V1C">V1C - Male</option>
+
+                                <option value="V1D">V1D - Female</option>
+
+                                <option value="V1E">V1E - Female</option>
+
+                            </optgroup>
+
+                            <optgroup label="Village 2">
+
+                                <option value="V2A">V2A - Male</option>
+
+                                <option value="V2B">V2B - Male</option>
+
+                                <option value="V2C">V2C - Female</option>
+
+                                <option value="V2D">V2D - Male</option>
+
+                                <option value="V2E">V2E - Male</option>
+
+                            </optgroup>
+
+                            <optgroup label="Village 3">
+
+                                <option value="V3A">V3A - Male</option>
+
+                                <option value="V3B">V3B - Female</option>
+
+                                <option value="V3C">V3C - Female</option>
+
+                                <option value="V3D">V3D - Female</option>
+
+                                <option value="V3E">V3E - Male</option>
+
+                            </optgroup>
+
+                            <optgroup label="Village 4">
+
+                                <option value="V4A">V4A - Female</option>
+
+                                <option value="V4B">V4B - Male</option>
+
+                                <option value="V4C">V4C - Male</option>
+
+                                <option value="V4D">V4D - Male</option>
+
+                                <option value="V4E">V4E - Female</option>
+
+                            </optgroup>
+
+                            <optgroup label="Village 5">
+
+                                <option value="V5A">V5A - Male</option>
+
+                                <option value="V5B">V5B - Male</option>
+
+                                <option value="V5C">V5C - Male</option>
+
+                                <option value="V5D">V5D - Male</option>
+
+                                <option value="V5E">V5E - Male</option>
+
+                                <option value="V5F">V5F - Male</option>
+
+                                <option value="V5G">V5G - Female</option>
+
+                                <option value="V5H">V5H - Female</option>
+
+                                <option value="V5I">V5I - Female</option>
+
+                                <option value="V5J">V5J - Female</option>
+
+                            </optgroup>
+
+                        </select>
+
+                        <br>
+
+                        <br> Floor Nr:
+
+                        <br>
+
+                        <select class="form-control" id="floorDropdown">
+
+                            <optgroup label="Floor Nr">
+
+                                <option value="01">1</option>
+
+                                <option value="02">2</option>
+
+                                <option value="03">3</option>
+
+                                <option value="04">4</option>
+
+                                <option value="05">5</option>
+
+                            </optgroup>
+
+                        </select>
+
+                        <br>
+
+                        <br> House Nr:
+
+                        <br>
+
+                        <select class="form-control" id="houseDropdown">
+
+                            <optgroup label="House Nr">
+
+                                <option value="01">1</option>
+
+                                <option value="02">2</option>
+
+                                <option value="03">3</option>
+
+                                <option value="04">4</option>
+
+                            </optgroup>
+
+                        </select>
+
+                        <br>
+
+                        <br> Room Nr:
+
+                        <br>
+
+                        <select class="form-control" id="roomDropdown">
+
+                            <optgroup label="Room Nr">
+
+                                <option value="01">1</option>
+
+                                <option value="02">2</option>
+
+                                <option value="03">3</option>
+
+                                <option value="04">4</option>
+
+                                <option value="05">5</option>
+
+                                <option value="06">6</option>
+
+                            </optgroup>
+
+                        </select>
+
+                        <br>
+
+                        <br> Category:
+
+                        <br>
+
+                        <select class="form-control" id="categoryDropdown">
+
+                            <optgroup label="Category">
+
+                                <option value="Room">Room</option>
+
+                                <option value="Toilet">Toilet</option>
+
+                                <option value="Pantry">Pantry</option>
+
+                                <option value="Corridor">Corridor</option>
+
+                                <option value="Other">Other</option>
+
+                            </optgroup>
+
+                        </select>
+
+                        <br>
+
+                    </form>
+
+                    <br> Your Complaint:
+
+                    <br>
+
+                    <textarea class="form-control" name="message" rows="10" cols="82" id="complaintRoom"></textarea>
+
+                    <br>
+
+                    <br>
+
+                    <button class="form-control" type="button" onclick="hostelReport()">Submit</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="page-header">
+
+            <div class="panel panel-default">
+
+                <div class="panel-heading">
+
+                    <h1 class="panel-title">
+
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseichi">Cafetaria Complaint</a>
+
+                </h1>
+
+                </div>
+
+                <div id="collapseichi" class="panel-collapse collapse">
+
+                    <div class="panel-body">
+
+                        <div class="panel-group" id="accordion">
+
+                            <!--div class="faqHeader">Hostel related</div/-->
+
+                            <div>
+
+                                <form>
+
+                                    Cafe Name
+
+                                    <br>
+
+                                    <input class="form-control" type="text" name="cafe" value=" " id="cafeName">
+
+                                    <br>
+
+                                    <br> Village:
+
+                                    <br>
+
+                                    <select class="form-control" id="cafeVillage">
+
+                                        <optgroup label="Village">
+
+                                            <option value="V1">Village 1</option>
+
+                                            <option value="V2">Village 2</option>
+
+                                            <option value="V3">Village 3</option>
+
+                                            <option value="V4">Village 4</option>
+
+                                            <option value="V5">Village 5</option>
+
+                                            <option value="V6">Village 6</option>
+
+                                            <option value="Pocket D">Pocket D</option>
+
+                                            <option value="Pocket C">Pocket C</option>
+
+                                        </optgroup>
+
+                                    </select>
+
+                                    <br>
+
+                                    <br> Category for Complaint:
+
+                                    <br>
+
+                                    <select class="form-control" id="cafeCategory">
+
+                                        <optgroup label="Category">
+
+                                            <option value="Cleanliness">Cleanliness</option>
+
+                                            <option value="Food">Food</option>
+
+                                            <option value="Staff Attendance">Staff Attendance</option>
+
+                                            <option value="Pricing">Pricing</option>
+
+                                            <option value="Others">Others</option>
+
+                                        </optgroup>
+
+                                    </select>
+
+                                    <br>
+
+                                    <br> Your Complaint:
+
+                                    <br>
+
+                                    <textarea class="form-control" name="message" rows="10" cols="82" id="cafeComplaint"></textarea>
+
+                                    <br>
+
+                                    <br>
+
+                                    <button class="form-control" type="button" onclick="cafeReport()">Submit</button>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    <!-- Modal -->
+
+    <div class="modal fade" id="myModal" role="dialog">
+
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                    <h4 class="modal-title" id="title"></h4>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <p id="errText"></p>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="../js/fault-report-user.js"></script>
+
+</body>
+
+
+
+</html>

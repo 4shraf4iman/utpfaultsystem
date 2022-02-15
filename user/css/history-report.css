@@ -1,0 +1,26 @@
+/*rejected*/
+.tag-red{
+	color:red;
+	float:right;
+	font-size: 35px;
+}
+/*completed*/
+.tag-green{
+	color:green;
+	float:right;
+	font-size: 35px;
+}
+
+/*idle*/
+.tag-grey{
+	color:grey;
+	float:right;
+	font-size: 35px;
+}
+
+/*in process*/
+.tag-yellow{
+	color:yellow;
+	float:right;
+	font-size: 35px;
+}

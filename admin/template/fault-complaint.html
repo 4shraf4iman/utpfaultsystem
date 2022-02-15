@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/fault-complaint.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../js/fault-complaint.js"></script>
+</head>
+
+<body onload="getComplaint()">
+    <div class="container">
+        <div class="list-group" id="complaint">
+        </div>
+    </div>
+    <!-- Modal 
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+             Modal content
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">User Information</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label style="left:0">Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="John Wick" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label style="left:0">Matric ID:</label>
+                        <input type="text" class="form-control" id="id" placeholder="22121" name="id">
+                    </div>
+                    <div class="form-group">
+                        <label style="left:0">Room:</label>
+                        <input type="text" class="form-control" id="room" placeholder="V5B-L5-02-02" name="room">
+                    </div>
+                    <div class="form-group">
+                        <label style="left:0">Complaint:</label>
+                        <input type="text" class="form-control" id="complaint" placeholder="State your complaint here.." name="complaint">
+                    </div> -->
+    <!--Modal-->
+    <div class="modal fade" id="cafeModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Complaint Information</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label style="left:0">Student ID:</label>
+                        <input type="text" class="form-control" id="studentCafe" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label style="left:0">Type:</label>
+                        <input type="text" class="form-control" id="typeCafe" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label style="left:0">Status:</label>
+                        <input type="text" class="form-control" id="statusCafe" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label style="left:0">Cafe Name:</label>
+                        <input type="text" class="form-control" id="cafeCafe" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label style="left:0">Village:</label>
+                        <input type="text" class="form-control" id="villageCafe" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label style="left:0">Category:</label>
+                        <input type="text" class="form-control" id="categoryCafe" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label style="left:0">Description:</label>
+                        <textarea class="form-control" name="message" id="descriptionCafe" disabled rows="10" cols="82"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal" id="completedCafe" onclick="changeStatus('completed')">Completed</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" id="rejectCafe" onclick="changeStatus('rejected')">Reject</button>
+                    <button type="button" class="btn btn-warning" data-dismiss="modal" id="inProgressCafe" onclick="changeStatus('in progress')">In Progress</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" id="closeCafe">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="hostelModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Complaint Information</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label style="left:0">Student ID:</label>
+                        <input type="text" class="form-control" id="studentHostel" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label style="left:0">Type:</label>
+                        <input type="text" class="form-control" id="typeHostel" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label style="left:0">Status:</label>
+                        <input type="text" class="form-control" id="statusHostel" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label style="left:0">Room:</label>
+                        <input type="text" class="form-control" id="roomHostel" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label style="left:0">Category:</label>
+                        <input type="text" class="form-control" id="categoryHostel" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label style="left:0">Description:</label>
+                        <textarea class="form-control" name="message" id="descriptionHostel" disabled rows="10" cols="82"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal" id="completedHostel" onclick="changeStatus('completed')">Completed</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" id="rejectHostel" onclick="changeStatus('rejected')">Reject</button>
+                    <button type="button" class="btn btn-warning" data-dismiss="modal" id="inProgressHostel" onclick="changeStatus('in progress')">In Progress</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" id="closeHostel">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>

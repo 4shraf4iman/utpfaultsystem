@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head >
+
+    <title>Bootstrap Example</title>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../css/user-profile.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="../js/user-profile.js"></script>
+
+</head>
+
+
+
+<body onload="getProfile()" style="background-color:#272A37;color:#84E0DC;"><font size="3" face="cursive">
+
+    <div class="container">
+
+        <label class="switch">
+
+            <input type="checkbox" id="toggle" onclick="edit()">
+
+            <span class="slider round"></span>
+
+        </label>
+
+        <br/>
+
+        <div>
+
+            <form>
+
+                <div class="form-group">
+
+                    <label style="left:0 " for="sname">Name:</label>
+
+                    <input type="text" class="form-control" id="sname" placeholder="John Wick" name="name" disabled>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label style="left:0 " for="email">Email:</label>
+
+                    <input type="email" class="form-control" id="email" placeholder="abc@test.com" name="email" disabled>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label style="left:0 " for="phone">Phone Number:</label>
+
+                    <input type="text" class="form-control" id="phone" placeholder="0123456789" name="phone" disabled>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label style="left:0 " for="id">Matric ID:</label>
+
+                    <input type="text" class="form-control" id="id" placeholder="22121" name="id" disabled>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label style="left:0" for="room">Room:</label>
+
+                    <input type="text" class="form-control" id="room" placeholder="V5B-L5-02-02" name="room" disabled>
+
+                </div>
+
+                <br/>
+
+                <i>Only Key-in Password Details When Changing to New Password Otherwise ignore Password Input</i>
+
+                <hr>
+
+				<div class="form-group">
+
+                    <label for="pwd" >Old Password:</label>
+
+                    <input type="password" class="form-control" id="pwd" name="pwd" disabled>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="newpwd" >New Password:</label>
+
+                    <input type="password" class="form-control" id="newpwd" name="newpwd" disabled>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="repwd" >Re-type Password:</label>
+
+                    <input type="password" class="form-control" id="repwd" name="repwd" disabled>
+
+                </div>
+
+               
+
+				<button type="button" id="saveButton"  class="btn btn-success" id="submit" onclick="save()" disabled>Save</button>
+
+                <button type="button" id="cancelButton" class="btn btn-danger" onclick="getProfile()" disabled>Cancel</button>
+
+            </form>
+
+        </div>
+
+		
+
+		
+
+    <!-- Modal -->
+
+    <div class="modal fade" id="myModal" role="dialog">
+
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                    <h4 class="modal-title" id="tittle"></h4>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <p id="errText"></p>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</font>
+</body>
+
+
+
+</html>
